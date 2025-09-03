@@ -3,10 +3,10 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  build: {
-    outDir: "build",
-  },
   server: {
-    port: 5173,
+    port: 5173, // only used in local dev, ignored in Render
+  },
+  build: {
+    outDir: "dist", // <-- Render expects "dist" by default
   },
 });
